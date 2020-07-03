@@ -1,0 +1,18 @@
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "{{ shop.name }}",
+  {% if section.settings.logo %}
+    {% assign image_size = section.settings.logo.width | append:'x' %}
+    "logo": "https:{{ section.settings.logo | img_url: image_size }}",
+  {% endif %}
+  "sameAs": [
+    "{{ settings.social_twitter_link }}",
+    "{{ settings.social_facebook_link }}",
+    "{{ settings.social_pinterest_link }}",
+    "{{ settings.social_instagram_link }}"
+  ],
+  "url": "{{ shop.url }}{{ page.url }}"
+}
+</script>

@@ -1,11 +1,4 @@
 body {
-  @apply leading-normal;
-  @apply text-black;
-  @apply font-lausanne;
-  @apply text-base-mob;
-  @screen md {
-    @apply text-base-desk;
-  }
 }
 
 html {
@@ -27,10 +20,6 @@ svg.icon {
   fill: currentColor;
 }
 
-.paragraphs p + p {
-  margin-top: 1em;
-}
-
-th {
-  font-weight: normal;
+p + p {
+  margin-top: 1.5em;
 }

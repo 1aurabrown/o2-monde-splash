@@ -1,13 +1,13 @@
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Helvetica Neue LT', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
 @responsive {
-  /* 20px */
   .uppercase {
     text-transform: uppercase;
-    letter-spacing: .12em;
+    letter-spacing: .1em;
   }
   .not-uppercase {
     text-transform: initial;

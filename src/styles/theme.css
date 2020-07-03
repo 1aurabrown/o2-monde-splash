@@ -6,14 +6,4 @@
 @import './core/links-buttons.css';
 @import './core/typography.css';
 @import './core/helpers.css';
-@import './core/fade-in-scroll.css';
-@import './core/swiper.css';
 @import './core/forms.css';
-
-@import './components/header.css';
-@import './components/mobile-nav.css';
-@import './components/footer.css';
-@import './components/press-quotes.css';
-
-@import './templates/page.css';
-@import './templates/policies.css';

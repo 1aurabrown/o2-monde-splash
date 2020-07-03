@@ -1,0 +1,65 @@
+<div class="h-full w-full fixed inset-0 overflow-hidden">
+  <video class="h-full w-full object-fill absolute inset-0" autoplay loop muted src="{{ section.settings.video_url }}">
+  </video>
+  <section class="bg-backdrop z10 absolute inset-0 flex items-center justify-center text-center text-white">
+    <div class="max-w-md">
+      <h1 class="text-lg uppercase">{{ section.settings.header }}</h1>
+      <div  class="text-sm">
+        <p><b>{{ section.settings.body_top }}</b></p>
+        <p>{{ section.settings.body_bottom }}</p>
+        <form class="pt-8 flex items-center px-auto max-w-sm border-b border-solid border-white">
+          <input class="bg-transparent flex-grow" type="email" placeholder="{{ section.settings.placeholder }}"></input>
+          <button type="submit" class="whitespace-no-wrap">{{ section.settings.cta }}</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+{% schema %}
+  {
+    "name": "Splash Page",
+    "settings": [
+      {
+        "type": "url",
+        "id": "video_url",
+        "label": "Video URLdeo",
+        "info": "Upload your video in the Admin file settings and copy the generated URL to this field."
+      },
+      {
+        "type": "text",
+        "id": "header",
+        "label": "Header"
+      },
+      {
+        "type": "textarea",
+        "id": "body_top",
+        "label": "Body Line 1"
+      },
+      {
+        "type": "textarea",
+        "id": "body_bottom",
+        "label": "Body Line 2"
+      },
+      {
+        "type": "text",
+        "id": "placeholder",
+        "label": "Placeholder Text",
+        "default": "Your email"
+      },
+      {
+        "type": "text",
+        "id": "success",
+        "label": "Success Message",
+        "default": "Thank you, we'll be in touch shortly."
+      },
+      {
+        "type": "text",
+        "id": "cta",
+        "label": "Button Text",
+        "default": "Sign Up"
+      }
+    ]
+  }
+{% endschema %}

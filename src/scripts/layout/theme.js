@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   listen({
     ignores: [
       /\/cart\/?/,
+      /\/account\/?/,
       uri => uri.includes('#')
     ]
   })
