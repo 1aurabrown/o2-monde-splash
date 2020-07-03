@@ -1,0 +1,25 @@
+<div class="collection-grid {{ class }} pt-12 pb-14 md:pt-28 md:pb-28">
+
+  <div class="px-4 md:px-16 mx-auto max-w-screen-xl">
+    <div data-animate="slide-up">
+
+      <h2 class="text-center text-xl-mob md:text-2xl-tight-desk">{{ collection.title }}</h2>
+
+      <p class="text-center max-w-em mx-auto md:text-lg-desk mt-2 md:mt-5">{{ collection.description }}</p>
+
+    </div>
+
+    <div class="collections__grid grid grid-cols-2 mt-8 md:grid-cols-3 row-gap-8 col-gap-3 md:row-gap-16 md:col-gap-12 md:mt-16">
+
+      {% for collection_product in collection.products %}
+
+        {% include 'product-card' with card_product: collection_product %}
+
+      {% endfor %}
+
+    </div>
+  </div>
+</div>
+
+{% assign class = blank %}
+{% assign collection = blank %}

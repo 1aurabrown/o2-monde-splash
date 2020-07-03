@@ -1,0 +1,16 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@responsive {
+  /* 20px */
+  .uppercase {
+    text-transform: uppercase;
+    letter-spacing: .12em;
+  }
+  .not-uppercase {
+    text-transform: initial;
+    letter-spacing: initial;
+  }
+}

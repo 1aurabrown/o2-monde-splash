@@ -1,0 +1,73 @@
+
+/* Skip to content button */
+
+.skip-link {
+  left: -999px;
+  position: absolute;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -999;
+}
+
+.skip-link:focus,
+.skip-link:active {
+  background: white;
+  border: 2px solid black;
+  color: black;
+  left:  0;
+  top:  0;
+  width:  auto;
+  height:  auto;
+  overflow: auto;
+  margin:  10px;
+  padding: 5px;
+  font-size: 1.4em;
+  z-index: 999;
+}
+
+.flex-center {
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+}
+
+[v-cloak] {
+  display: none !important;
+}
+
+.max-w-lg-em {
+  /* Limit text width proportionally to type size.*/
+  max-width: 40em;
+}
+
+.max-w-em {
+  /* Limit text width proportionally to type size, should be around 60 characters wide.*/
+  max-width: 30em;
+}
+
+
+.max-w-sm-em {
+  /* Limit text width proportionally to type size.*/
+  max-width: 18em;
+}
+
+
+/*Only show when browser cookies are not supported*/
+.supports-no-cookies:not(html) {
+  display: none;
+
+  html.supports-no-cookies & {
+    display: block;
+  }
+}
+
+/*Only show when browser cookies are supported*/
+.supports-cookies {
+  html.supports-no-cookies & {
+    display: none;
+  }
+}
+
+

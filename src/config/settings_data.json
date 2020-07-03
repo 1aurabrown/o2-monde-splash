@@ -1,0 +1,90 @@
+{
+  "current": "Default",
+  "presets": {
+    "Default": {
+      "sections": {
+        "theme-styles": {
+          "type": "theme-styles"
+        },
+        "newsletter": {
+          "type": "newsletter"
+        },
+        "homepage-hero": {
+          "type": "homepage-hero"
+        },
+        "press-quotes": {
+          "type": "press-quotes",
+          "blocks": {
+            "press-quote-0": {
+              "type": "press-quote",
+              "settings": {
+                "text": "Lacus laoreet non curabitur gravida arcu ac."
+              }
+            },
+            "press-quote-1": {
+              "type": "press-quote",
+              "settings": {
+                "text": "Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget."
+              }
+            },
+            "press-quote-2": {
+              "type": "press-quote",
+              "settings": {
+                "text": "In hendrerit gravida rutrum quisque non tellus."
+              }
+            },
+            "press-quote-3": {
+              "type": "press-quote",
+              "settings": {
+                "text": "At varius vel pharetra vel turpis nunc eget lorem dolor."
+              }
+            },
+            "press-quote-4": {
+              "type": "press-quote",
+              "settings": {
+                "text": "Gravida neque convallis a cras semper auctor neque vitae."
+              }
+            }
+          },
+          "block_order": [
+            "press-quote-0",
+            "press-quote-1",
+            "press-quote-2",
+            "press-quote-3",
+            "press-quote-4"
+          ]
+        },
+        "homepage-featured-products": {
+          "type": "homepage-featured-products",
+          "blocks": {
+            "product-0": {
+              "type": "product"
+            },
+            "product-1": {
+              "type": "product"
+            },
+            "product-2": {
+              "type": "product"
+            }
+          },
+          "block_order": [
+            "product-0",
+            "product-1",
+            "product-2"
+          ]
+        },
+        "homepage-full-bleed-image": {
+          "type": "homepage-full-bleed-image"
+        }
+      },
+      "content_for_index": [
+        "homepage-hero",
+        "press-quotes",
+        "homepage-full-bleed-image",
+        "homepage-featured-products",
+        "newsletter",
+        "theme-styles"
+      ]
+    }
+  }
+}

@@ -1,0 +1,36 @@
+body {
+  @apply leading-normal;
+  @apply text-black;
+  @apply font-lausanne;
+  @apply text-base-mob;
+  @screen md {
+    @apply text-base-desk;
+  }
+}
+
+html {
+  max-width: 100%;
+}
+
+q {
+  quotes: "“" "”" "‘" "’";
+}
+
+q::before {
+    content: open-quote;
+}
+q::after {
+    content: close-quote;
+}
+
+svg.icon {
+  fill: currentColor;
+}
+
+.paragraphs p + p {
+  margin-top: 1em;
+}
+
+th {
+  font-weight: normal;
+}

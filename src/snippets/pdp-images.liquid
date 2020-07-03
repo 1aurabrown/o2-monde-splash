@@ -1,0 +1,41 @@
+<div class="pdp-images relative md:pb-24">
+
+  <div class="pdp-images__thumbs hidden md:flex flex-col absolute t-0 l-0 z-10 w-1/8 transform -translate-x-1/2">
+    <div class="mt-30-per">
+      {% for image in product.images %}
+          <div
+          data-index="{{ forloop.index0 }}"
+          class="cursor-pointer pdp-images__thumb rounded-full overflow-hidden border-2 mt-15-per">
+            {% include 'responsive-image',
+              image: image,
+              crop_aspect_ratio: 1 %}
+          </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+
+      {% for image in product.images %}
+        <div class="swiper-slide bg-off-white">
+          {% include 'responsive-image', image: image, default_width: 300 %}
+        </div>
+      {% endfor %}
+
+    </div>
+
+    <div class="pdp-images__nav md:hidden flex flex-row items-center justify-between px-6 pt-6" style="--swiper-navigation-size: 1rem">
+
+      <div class="pdp-images__prev inset-0 translate-y-0 static m-0">
+        {% include 'arrow.svg', className: 'left' %}
+      </div>
+
+      <div class="pdp-images__pagination"></div>
+
+      <div class="pdp-images__next inset-0 translate-y-0 static m-0">
+        {% include 'arrow.svg', className: 'right' %}
+      </div>
+    </div>
+  </div>
+
+</div>

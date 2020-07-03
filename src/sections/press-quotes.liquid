@@ -1,0 +1,121 @@
+<div class="press-quotes m-0 md:m-18 md:mb-24 mx-auto {{ section.settings.border_top_class }}" data-section-type="press-quotes" data-section-id="{{ section.id }}">
+
+  <div data-animate="slide-up" class="press-quotes__texts text-xl-mob md:text-2xl-tight-desk">
+    <div class="swiper-container">
+
+      <div class="swiper-wrapper items-center">
+        {% for block in section.blocks %}
+          <div class="swiper-slide px-16 pt-12 pb-5 md:p-0 text-center" data-index="{{ forloop.index }}">
+            <q class="block mx-auto md:max-w-screen-lg">{{ block.settings.text }}</q>
+          </div>
+        {% endfor %}
+      </div>
+
+      <div class="swiper-pagination md:hidden"></div>
+    </div>
+
+  </div>
+  <div class="press-quotes__images md:mt-12">
+    <div class="swiper-container mx-auto md:max-w-screen-xl">
+      <div class="swiper-wrapper md:flex md:flex-row">
+        {% for block in section.blocks %}
+          <div role="button"
+          class="outline-none pt-5 pb-12 md:p-0 cursor-pointer swiper-slide md:flex-1 md:items-center relative"
+          data-index="{{ forloop.index0 }}">
+            <div data-animate="slide-up" class="w-32 md:w-auto mx-auto md:mx-20-per delay-{{ forloop.index | times: 200 }}">
+              {% assign alt = block.settings.source | default: block.settings.text %}
+              {% include 'responsive-image',
+                image: block.settings.image,
+                crop_aspect_ratio: 2.5,
+                fit: 'contain',
+                alt: alt %}
+              </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% schema %}
+  {
+    "name": "Press Quotes",
+    "max_blocks": 12,
+    "settings": [
+      {
+        "type": "select",
+        "id": "border_top_class",
+        "label": "Top Border",
+        "default": "border-t-0",
+        "options": [
+          {
+            "value": "border-t-0",
+            "label": "None"
+          },
+          {
+            "value": "md:border-t",
+            "label": "Desktop Only"
+          },
+          {
+            "value": "border-t md:border-t-0",
+            "label":  "Mobile Only"
+          },
+          {
+            "value": "border-t",
+            "label": "Mobile & Desktop"
+          }
+        ]
+      }
+    ],
+    "blocks": [
+      {
+        "type": "press-quote",
+        "name": "Press Quote",
+        "settings": [
+          {
+            "label": "Text",
+            "id": "text",
+            "type": "textarea",
+            "default": "The sock brand we can't stop talking about"
+          },
+          {
+            "label": "Logo",
+            "id": "image",
+            "type": "image_picker"
+          },
+          {
+            "label": "Source",
+            "id": "source",
+            "type": "text",
+            "info": "Used as alt text for image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Press Quotes",
+        "category": "Press",
+        "blocks": [
+          {
+            "type": "press-quote"
+          },
+          {
+            "type": "press-quote"
+          },
+          {
+            "type": "press-quote"
+          },
+          {
+            "type": "press-quote"
+          },
+          {
+            "type": "press-quote"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
