@@ -38,7 +38,6 @@ select,
 button,
 textarea
 {
-  border: 0;
   padding: 0;
   display: inline-block;
   vertical-align: middle;
@@ -57,11 +56,11 @@ button:focus
   outline: 0;
 }
 
-input, button {
-  -webkit-appearance: none;
-  appearance: none;
+input::placeholder,
+textarea::placeholder {
+  color: inherit;
+  opacity: 60%;
 }
-
 /* Box Sizing Reset
 -----------------------------------------------*/
 

@@ -5,8 +5,8 @@ module.exports = {
       '0': '0'
     },
     colors: {
-      backdrop: 'rgba(10, 24, 27, .15)',
-      white: '#ffffff'
+      backdrop: 'rgba(20, 40, 47, .2)',
+      white: '#F5F5F5'
     }
   },
   corePlugins: {

@@ -1,0 +1,47 @@
+<form id="email_signup" class="klaviyo_gdpr_embed_{{ list_id }}" action="//manage.kmail-lists.com/subscriptions/subscribe" data-ajax-submit="//manage.kmail-lists.com/ajax/subscriptions/subscribe" method="GET" target="_blank" novalidate="novalidate">
+  <input type="hidden" name="g" value="{{ list_id }}">
+  <input type="hidden" name="$fields" value="$consent">
+  <input type="hidden" name="$list_fields" value="$consent">
+  <div class="klaviyo_field_group {{ wrapper_class }}">
+    {% if form_title != blank %}<label for="k_id_email">{{ form_title }}</label>{% endif %}
+    <input class="{{ input_class }}" type="email" value="" name="email" id="k_id_email" placeholder="{{ placeholder }}" />
+
+    <div class="klaviyo_form_actions">
+    <button type="submit" class="klaviyo_submit_button {{ button_class }}">{{ cta }}</button> </div>
+  </div>
+  <div class="klaviyo_messages {{ messages_class }}">
+    <div class="success_message" style="display:none;"></div>
+    <div class="error_message text-xs text-left" style="display:none;"></div>
+  </div>
+</form>
+
+<script type="text/javascript" src="//www.klaviyo.com/media/js/public/klaviyo_subscribe.js"></script>
+<script type="text/javascript">
+  KlaviyoSubscribe.attachToForms('#email_signup', {
+    hide_form_on_success: true,
+    {%- if success_message != blank -%}
+
+      success_message: {{ success_message | json }},
+
+    {%- endif -%}
+    extra_properties: {
+      $source: '{{ source | default: "$embed" }}',
+      $method_type: "Klaviyo Form",
+      $method_id: 'embed',
+      $consent_version: 'Embed default text'
+    }
+  });
+</script>
+
+{% assign list_id = blank %}
+{% assign form_title = blank %}
+{% assign wrapper_class = blank %}
+{% assign input_class = blank %}
+{% assign source = blank %}
+{% assign button_class = blank %}
+{% assign actions_class = blank %}
+{% assign messages_class = blank %}
+{% assign success_message = blank %}
+{% assign placeholder = blank %}
+{% assign cta = blank %}
+

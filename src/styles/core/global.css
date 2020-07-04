@@ -20,6 +20,3 @@ svg.icon {
   fill: currentColor;
 }
 
-p + p {
-  margin-top: 1.5em;
-}
