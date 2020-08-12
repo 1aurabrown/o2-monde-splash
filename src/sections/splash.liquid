@@ -6,13 +6,13 @@
       {% include 'responsive-image', image: section.settings.logo %}
     </div>
   </div>
-  <section class="bg-backdrop z10 absolute inset-0 flex items-center justify-center text-center text-white">
+  <section class="bg-black bg-opacity-25 z10 absolute inset-0 flex items-center justify-center text-center text-white">
 
-    <div class="max-w-lg w-full px-6 pt-16">
+    <div class="max-w-lg w-full px-6 pt-16 text-lg">
       <h1 class="text-xl uppercase">{{ section.settings.header }}</h1>
       <div class="">
-        <p class="mt-4 text-lg">{{ section.settings.body_top }}</p>
-        <p class="mt-20">{{ section.settings.body_bottom }}</p>
+        {% if section.settings.body_top != blank %}<div class="mt-4">{{ section.settings.body_top }}</div>{% endif %}
+        {% if section.settings.body_bottom != blank %}<div class="mt-20">{{ section.settings.body_bottom }}</div>{% endif %}
         <div class="mt-6 h-16 max-w-xs mx-auto w-full">
           {% include 'klaviyo-form'
             list_id: section.settings.list_id,
