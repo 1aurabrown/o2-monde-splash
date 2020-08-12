@@ -5,9 +5,37 @@ module.exports = {
       '0': '0'
     },
     colors: {
-      backdrop: 'rgba(20, 40, 47, .2)',
-      white: '#F5F5F5'
+      white: '#F3F3F0',
+      black: '#222222',
+      cream: '#f0ebe6',
+      grey: '#e8e8e8',
+      'green-light': '#636a52',
+      'green-dark': '#404534',
+      blue: '#3F5561'
+    },
+    fontSize: {
+      'xs': `${10/16}rem`,
+      'sm': `${11/16}rem`,
+      'md': `${12/16}rem`,
+      'lg': `${14/16}rem`,
+      'xl': `${16/16}rem`,
+      'heading-s': `${24/16}rem`,
+      'heading-m': `${32/16}rem`,
+      'heading-l': `${48/16}rem`,
+      'heading-xl': `${60/16}rem`,
+    },
+    lineHeight: {
+      normal: 1.8,
+      tight: 1.3
+    },
+    fontFamily: {
+      sans: "'Avenir Next', 'Avenir', 'Gill Sans', sans-serif",
+      display: "'Orelo', serif",
     }
+  },
+  variants: {
+    fontFamily: [],
+    leading: []
   },
   corePlugins: {
     float: false,

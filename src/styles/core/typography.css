@@ -1,11 +1,26 @@
+.type-normal {
+  @apply font-sans;
+  @apply leading-normal;
+  letter-spacing: .03em;
+}
+
+
+.type-heading {
+  @apply font-display;
+  @apply leading-tight;
+  letter-spacing: .02em;
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Helvetica Neue LT', 'Helvetica Neue', Helvetica, sans-serif;
+  @apply type-normal;
+  @apply text-md;
 }
 
 @responsive {
   .uppercase {
+    @apply type-normal;
     text-transform: uppercase;
     letter-spacing: .1em;
   }
